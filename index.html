@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мои поездки</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  
+  </head>
+  <body class="body">
+    <section class="nav-bar">
+      <div class="nav-bar__logo-box">
+        <a href="#" class="logo flex-center"></a>
+      </div>
+      <div class="nav-bar__title-box">
+        <div>
+          <a href="#" class="nav-bar__title--active flex-center">Поездки</a>
+        </div>
+        <div>
+          <a href="#" class="nav-bar__title flex-center">Авансовые отчеты</a>
+        </div>
+        <div>
+          <a href="#" class="nav-bar__title flex-center">Согласование</a>
+        </div>
+        <div>
+          <a href="#" class="nav-bar__title flex-center">Отчеты</a>
+        </div>
+      </div>
+      <div class="nav-bar__name-box flex-center">
+        <a class="nav-bar__name flex-center" href="#">
+          <span class="visually-hidden">Сотрудник</span>
+          <span class="nav-bar__name-text">Заболоцкий К.О.</span>
+        </a>
+        <a class="nav-bar__logout flex-center" href="#">
+          <span class="visually-hidden">Выход</span>
+        </a>
+      </div>
+    </section>
+    <section class="main-menu">
+      <div class="menu flex-center">
+        <div class="menu__title-box">
+          <div class="menu__title-text-box">
+            <a class="menu__back-btn flex-center" href="#">
+              <span class="menu__back-btn-text">Назад</span>
+            </a>
+            <h1 class="menu__title-text">Мои поездки</h1>
+          </div>
+          <button class="menu__add-trip btn flex-center">
+            Оформить поездку
+          </button>
+        </div>
+      </div>
+      <form action="#" class="form flex-center">
+        <fieldset>
+          <legend class="form-legend">
+            <div class="form-legend__box form-start">
+              <label class="form-legend__box-label" for="date-start"
+                >Период с:</label
+              >
+              <input
+                name="start"
+                id="date-start"
+                value="2024-02-22"
+                type="date"
+              />
+            </div>
+            <div class="form-legend__box form-end">
+              <label for="date-end">по</label>
+              <input
+                name="date-end"
+                id="date-end"
+                placeholder="Выбрать..."
+                type="text"
+                onfocus="this.type='date'"
+                onblur="if(this.value==''){this.type='text'}"
+              />
+            </div>
+          </legend>
+        </fieldset>
+        <fieldset>
+          <label class="form-search-label" for="form-search"
+            ><input
+              class="form-search"
+              type="search"
+              id="form-search"
+              placeholder="Поиск..."
+          /></label>
+        </fieldset>
+        <button class="form__btn btn">
+          <span class="form__btn-text">Сбросить все</span>
+        </button>
+        <div class="form__checkbox flex-center">
+          <input type="checkbox" id="form__checkbox" />
+          <label class="form__checkbox-label" for="form__checkbox">
+            Показать архивные поездки
+          </label>
+        </div>
+      </form>
+    </section>
+    <section class="main">
+      <ul class="main__list">
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item--active">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград, Кременчуг-Константиновское, Петропавловск-Камчатский, Новосибирск, Волгоград
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+        <li class="main__item">
+          <ul class="main__item-info-box">
+            <li class="main__item-info">
+              <div class="main__item-info-title">№ поездки</div>
+              <a class="main__item-info-link" href="#">000115</a>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Дата поездки</div>
+              <div class="main__item-info-link" href="#">
+                22.02.2024 - 27.02.2024
+              </div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, план</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Сумма, факт</div>
+              <div class="main__item-info-link" href="#">29 400,00</div>
+            </li>
+            <li class="main__item-info">
+              <div class="main__item-info-title">Город</div>
+              <div class="main__item-info-link" href="#">
+                Москва, Ярославль, Ижевск, Владимир
+              </div>
+            </li>
+          </ul>
+          <div class="main-item-btn-title">
+            <div>Статус</div>
+            <button class="main-item-btn btn">
+              <span>Документы</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>
